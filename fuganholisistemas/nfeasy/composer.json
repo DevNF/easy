@@ -1,0 +1,21 @@
+{
+    "name": "fuganholisistemas/nfeasy",
+    "description": "Biblioteca para comunicaçao com a API Fuganholi Easy",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Call Seven",
+            "email": "callseven7@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "NFHub\\NFConta\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+    	"nfhub/common": "dev-stable"
+    }
+}
