@@ -1,5 +1,5 @@
 <?php
-namespace NFHub\Easy;
+namespace NFHub\NFEasy;
 
 use Exception;
 use NFHub\Common\Tools as ToolsBase;
@@ -8,8 +8,8 @@ use NFHub\Common\Tools as ToolsBase;
  *
  * Classe responsável pela comunicação com a API do Easy do FuganholiSistemas
  *
- * @category  NFEasy
- * @package   FuganholiSistemas\NFEasy\Tools
+ * @category  NFHub
+ * @package   NFHub\NFEasy\Tools
  * @author    Call Seven <callseven7 at gmail dot com>
  * @copyright 2024  Fuganholi Sistemas - NFSERVICE
  * @license   https://opensource.org/licenses/MIT MIT
