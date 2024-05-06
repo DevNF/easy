@@ -186,12 +186,13 @@ class Tools
      * Lista os Bancos cadastrados no Easy
      *
      * @param int $company_id ID da empresa a ser verificada
+     * @param string $filter Filtro da requisição
      * @param array $params Parametros adicionais para a requisição
      *
      * @access public
      * @return array
      */
-    function listBanks(int $company_id, array $params = []) :array
+    function listBanks(int $company_id, string $filter, array $params = []) :array
     {
         try {
             $params = array_filter($params, function($item) {
@@ -202,6 +203,12 @@ class Tools
                 $params[] = [
                     'name' => 'company_id',
                     'value' => $company_id
+                ];
+            }
+            if (!empty($filter)) {
+                $params[] = [
+                    'name' => 'filter',
+                    'value' => $filter
                 ];
             }
 
@@ -221,12 +228,13 @@ class Tools
      * Lista as Categorias cadastradas no Easy
      *
      * @param int $company_id ID da empresa a ser verificada
+     * @param string $filter Filtro da requisição
      * @param array $params Parametros adicionais para a requisição
      *
      * @access public
      * @return array
      */
-    function listCategories(int $company_id, array $params = []) :array
+    function listCategories(int $company_id, string $filter, int $id = null, array $params = []) :array
     {
         try {
             $params = array_filter($params, function($item) {
@@ -237,6 +245,18 @@ class Tools
                 $params[] = [
                     'name' => 'company_id',
                     'value' => $company_id
+                ];
+            }
+            if (!empty($filter)) {
+                $params[] = [
+                    'name' => 'filter',
+                    'value' => $filter
+                ];
+            }
+            if (!empty($id)) {
+                $params[] = [
+                    'name' => 'id',
+                    'value' => $id
                 ];
             }
 
